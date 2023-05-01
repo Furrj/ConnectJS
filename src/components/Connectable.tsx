@@ -1,6 +1,10 @@
 import React, { Children, useEffect } from "react";
 import { INode } from "../utils/generateLine";
 
+//REDUX
+import { useDispatch } from "react-redux";
+import { addNode } from "../data/nodeSlice";
+
 //PROPS
 interface IProps {
   children: React.ReactNode;
@@ -17,8 +21,10 @@ export interface IChildInfo {
 }
 
 const Connectable: React.FC<IProps> = ({ children, node }) => {
+  const dispatch = useDispatch();
+
   useEffect(() => {
-    console.log(getChildInformation());
+    dispatch(addNode(getChildInformation()));
   }, []);
 
   function getChildInformation(): IChildInfo {
