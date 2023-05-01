@@ -1,0 +1,11 @@
+@import "../vars.css";
+
+.line {
+  background: black;
+  color: black;
+}
+
+.svg {
+  position: absolute;
+  left: 0;
+}
