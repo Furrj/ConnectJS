@@ -1,10 +1,10 @@
 import React, { Children, useEffect } from "react";
-import { INode } from "../utils/nodes";
+import { INode } from "../utils/generateLines";
 
 //PROPS
 interface IProps {
   children: React.ReactNode;
-  nodes: INode[];
+  node: INode;
 }
 
 export interface IChildInfo {
@@ -13,9 +13,10 @@ export interface IChildInfo {
   height: number;
   xPosition: number;
   yPosition: number;
+  node: INode;
 }
 
-const Connectable: React.FC<IProps> = ({ children }) => {
+const Connectable: React.FC<IProps> = ({ children, node }) => {
   useEffect(() => {
     console.log(getChildInformation());
   }, []);
@@ -33,6 +34,7 @@ const Connectable: React.FC<IProps> = ({ children }) => {
         height: child.getBoundingClientRect().height,
         xPosition: child.getBoundingClientRect().x,
         yPosition: child.getBoundingClientRect().y,
+        node,
       };
     } else {
       throw Error("Can't find child");
