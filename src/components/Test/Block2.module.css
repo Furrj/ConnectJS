@@ -1,0 +1,11 @@
+@import "../../vars.css";
+
+.block2 {
+  width: 200px;
+  height: 200px;
+  border: var(--border);
+  box-sizing: border-box;
+  position: absolute;
+  top: 20%;
+  right: 10px;
+}
