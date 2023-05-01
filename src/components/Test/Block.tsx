@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Block.module.css";
-import { Side } from "../../utils/generateLines";
+import { Side } from "../../utils/generateLine";
 
 //UTILS
 import Connectable from "../Connectable";

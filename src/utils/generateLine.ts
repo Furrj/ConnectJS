@@ -22,7 +22,7 @@ function calculateEndpointsHorizontal(
   node2: IChildInfo
 ): ILineInfo {
   const x1: number = node1.xPosition + node1.width;
-  const x2: number = node1.xPosition;
+  const x2: number = node2.xPosition;
   const y1: number = node1.yPosition + Math.round(node1.height / 2);
   const y2: number = y1;
   return { x1, x2, y1, y2 };

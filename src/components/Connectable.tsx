@@ -1,5 +1,5 @@
 import React, { Children, useEffect } from "react";
-import { INode } from "../utils/generateLines";
+import { INode } from "../utils/generateLine";
 
 //PROPS
 interface IProps {
